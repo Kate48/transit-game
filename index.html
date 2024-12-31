@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <div class="screen" id="title-screen" >
+        <h3>Metro Vancouver Skytrain Stations: </h3>
+        <h2>How many can you name? </h2>
+        <button class="button" id="play-button">Play</button>
+    </div>
+
+    <div class="screen" id="game-screen" >
+
+        <div class="input-container">
+            <img id="map" src="map.jpg" alt="map of skytrain routes in Vancouver">
+
+            <p id="can-score">Canadaline: 0/17</p>
+            <p id="expo-score">Expo Line: 0/21</p>
+            <p id="mill-score">Millenium Line: 0/16</p>
+
+            <button class="button" id="end-button">Show Answers</button>
+        
+            <div class="input-boxes" id="boxes">
+                
+                <input id="user-input-1" class="small-input-box" placeholder="type hereeeeeee">  <!-- Waterfront -->
+                <input id="user-input-2" class="wide-input-box"> <!-- Van City Center -->
+                <input id="user-input-3" class="wide-input-box"> <!-- Yaletown -->
+                <input id="user-input-4" class="wide-input-box"> <!-- Olympic Village -->
+                <input id="user-input-5" class="wide-input-box"> <!-- Broadway -->
+                <input id="user-input-6" class="small-input-box"> <!-- King ed -->
+                <input id="user-input-7" class="wide-input-box"> <!-- Oakridge -->
+                <input id="user-input-8" class="wide-input-box"> <!-- Langara -->
+                <input id="user-input-9" class="small-input-box"> <!-- Marine -->
+                <input id="user-input-10" class="small-input-box"> <!-- Bridgeport -->
+                <input id="user-input-11" class="small-input-box"> <!-- Templeton -->
+                <textarea id="user-input-12" class="tall-input-box"></textarea> <!-- sea island -->
+                <textarea id="user-input-13" class="square-input-box"></textarea> <!-- yvr -->
+                <input id="user-input-14" class="small-input-box"> <!-- capstan -->
+                <input id="user-input-15" class="small-input-box"> <!-- aberdeen -->
+                <input id="user-input-16" class="small-input-box"> <!-- lansdowne -->
+                <input id="user-input-17" class="wide-input-box"> <!-- brighouse -->
+
+                <input id="user-input-18" class="small-input-box"> <!-- burrard -->
+                <input id="user-input-19" class="small-input-box"> <!-- granville -->
+                <input id="user-input-20" class="wide-input-box"> <!-- stadium chinatown -->
+                <textarea id="user-input-21" class="tall-input-box"></textarea> <!-- main st -->
+                <textarea id='user-input-22': class="tall-input-box"></textarea> <!-- commercial broadway-->
+                <input id='user-input-23': class="small-input-box"> <!-- nanimo -->
+                <input id='user-input-24': class="small-input-box"> <!-- 29th-->
+                <input id='user-input-25': class="wide-input-box"> <!-- joyce -->
+                <input id='user-input-26': class="small-input-box"> <!-- patt -->
+                <input id='user-input-27': class="small-input-box"> <!-- metrotown -->
+                <textarea id='user-input-28': class="square-input-box"></textarea> <!-- royal oak -->
+                <input id='user-input-29': class="small-input-box"> <!-- edmonds -->
+                <textarea id='user-input-30': class="square-input-box"></textarea> <!-- 22nd -->
+                <input id='user-input-31': class="wide-input-box"> <!-- new west -->
+                <input id='user-input-32': class="small-input-box"> <!-- columbia -->
+                <input id='user-input-33': class="small-input-box"> <!-- sapp-->
+                <input id='user-input-34': class="small-input-box"> <!-- braid -->
+                <input id='user-input-35': class="small-input-box"> <!-- scott -->
+                <input id='user-input-36': class="small-input-box"> <!-- gateway -->
+                <input id='user-input-37': class="wide-input-box"> <!-- surrey cen -->
+                <input id='user-input-38': class="wide-input-box"> <!-- king george -->
+
+                <input id="user-input-39" class="small-input-box">  <!-- vcc clark -->
+                <input id="user-input-40" class="small-input-box"> <!-- renfrew -->
+                <input id="user-input-41" class="small-input-box"> <!-- rupert -->
+                <input id="user-input-42" class="small-input-box"> <!-- gilmore -->
+                <textarea id="user-input-43" class="tall-input-box"></textarea> <!-- brentwood -->
+                <input id="user-input-44" class="small-input-box"> <!-- holdom -->
+                <textarea id="user-input-45" class="tall-input-box"></textarea> <!-- sperling -->
+                <textarea id="user-input-46" class="tall-input-box"></textarea> <!-- lake city way -->
+                <textarea id="user-input-47" class="large-input-box"></textarea> <!-- production way -->
+                <textarea id="user-input-48" class="tall-input-box"></textarea> <!-- lougheed -->
+                <input id="user-input-49" class="small-input-box"> <!-- burquitlam -->
+                <textarea id="user-input-50" class="square-input-box"></textarea> <!-- moody center -->
+                <textarea id="user-input-51" class="square-input-box"></textarea> <!-- inlet center -->
+                <textarea id="user-input-52" class="tall-input-box"></textarea> <!-- coquitlam central -->
+                <input id="user-input-53" class="small-input-box"> <!-- lincoln -->
+                <textarea id="user-input-54" class="tall-input-box"></textarea> <!-- lafarge lake -->
+
+            </div>
+            <p id="fine-print">Created by Kate Sheardown, Dec 2024. Not affiliated with Translink.</p>
+        </div>
+    </div>
+    <script src="./transit.js"></script>
+</body>
+</html>
