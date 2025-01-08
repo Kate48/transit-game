@@ -23,37 +23,26 @@ body {
 }
 
 
-#can-score {
+#can-score, #expo-score, #mill-score, #total-score {
     position: absolute;
     top: 0%;
     left: 35%;
     color: white;
-    background-color: #0e90b4;
     font-size: 2vw;
     border-radius: 4px;
     padding: 5px;
+}
+
+#can-score {
+    background-color: #0e90b4;
 }
 
 #expo-score {
-    position: absolute;
-    top: 0%;
-    left: 54%;
-    color: white;
     background-color: #035492;
-    font-size: 2vw;
-    border-radius: 4px;
-    padding: 5px;
 }
 
 #mill-score {
-    position: absolute;
-    top: 5%;
-    left: 40%;
-    color: white;
     background-color: #facd38;
-    font-size: 2vw;
-    border-radius: 4px;
-    padding: 5px;
 }
 
 
@@ -61,7 +50,7 @@ body {
     display: inline-block;
     padding: 10px 20px;
     font-size: 22px;
-    background-color: #4e4e4e;
+    background-color: #4a4a4a;
     color: white;
     border: none;
     border-radius: 5px;
@@ -114,7 +103,6 @@ body {
     font-family: Arial, sans-serif;
     font-size: 1.5vw;
     border-radius: 4px;
-    border: 1px solid #929292;
     box-sizing: border-box;
 }
 
@@ -127,31 +115,45 @@ body {
     outline: none;
     outline-offset: 0;
 }
+
+#can-boxes {
+    border: 3.5px solid rgb(14, 144, 180);
+}
+
+#expo-boxes {
+    border: 3.5px solid rgb(3, 84, 146);
+}
+
+#mill-boxes {
+    border: 3.5px solid rgb(250, 205, 56);
+}
+
+
   
   /* Size Variations */
 .wide-input-box {
-    width: 16vw;
-    height: 3vw;
+    width: 12vw;
+    height: 2vw;
 }
   
 .tall-input-box {
-    width: 10vw;
-    height: 5vw;
+    width: 8vw;
+    height: 4vw;
 }
   
 .small-input-box {
-    width: 10vw;
-    height: 3vw;
+    width: 8vw;
+    height: 2vw;
 }
 
 .square-input-box {
     width: 6vw;
-    height: 5vw;
+    height: 4vw;
 }
 
 .large-input-box {
-    width: 12vw;
-    height: 5vw;
+    width: 10vw;
+    height: 4vw;
 }
 
   

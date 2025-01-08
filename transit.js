@@ -11,7 +11,6 @@ play.addEventListener('click', () => {
 });
 
 
-
 const giveUp = document.getElementById('end-button');
 
 giveUp.addEventListener('click', () => {
@@ -50,7 +49,7 @@ function checkInputCorrectCan(event) {
     const targetWord = canStations[inputElem.id]; // Get the target word based on the ID
 
     if (inputElem.value.toLowerCase().includes(targetWord)) {
-        inputElem.style.border = '3.5px solid #0e90b4';
+        inputElem.style.backgroundColor = 'rgba(14, 144, 180, 0.3)';
         correctStatusCan[inputElem.id] = true;
     } else {
         inputElem.style.border = '2px solid red';
@@ -63,7 +62,8 @@ function checkInputCorrectCan(event) {
 
     const numCorrect = Object.values(correctStatusCan).filter(item => item === true).length;
     console.log(numCorrect);
-    canScore = "Canadaline ".concat(numCorrect.toString(), "/17");
+
+    canScore = "Canada Line ".concat(numCorrect.toString(), "/17");
     document.getElementById("can-score").innerHTML = canScore;
 }
 
@@ -110,7 +110,7 @@ function checkInputCorrectExpo(event) {
     const targetWord = expoStations[inputElem.id]; // Get the target word based on the ID
 
     if (inputElem.value.toLowerCase().includes(targetWord)) {
-        inputElem.style.border = '3.5px solid #035492';
+        inputElem.style.backgroundColor = 'rgba(3, 84, 146, 0.2);'
         correctStatusExpo[inputElem.id] = true;
     } else {
         inputElem.style.border = '2px solid red';
@@ -165,7 +165,7 @@ function checkInputCorrectMill(event) {
     const targetWord = millStations[inputElem.id]; // Get the target word based on the ID
 
     if (inputElem.value.toLowerCase().includes(targetWord)) {
-        inputElem.style.border = '3.5px solid #facd38';
+        inputElem.style.backgroundColor = 'rgba(3, 84, 146, 0.5);'
         correctStatusMill[inputElem.id] = true;
     } else {
         inputElem.style.border = '2px solid red';
