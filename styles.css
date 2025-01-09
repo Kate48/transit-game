@@ -23,10 +23,8 @@ body {
 }
 
 
-#can-score, #expo-score, #mill-score, #total-score {
+#can-score, #expo-score, #mill-score {
     position: absolute;
-    top: 0%;
-    left: 35%;
     color: white;
     font-size: 2vw;
     border-radius: 4px;
@@ -34,14 +32,20 @@ body {
 }
 
 #can-score {
+    top: 0%;
+    left: 35%;
     background-color: #0e90b4;
 }
 
 #expo-score {
+    top: 0%;
+    left: 55%;
     background-color: #035492;
 }
 
 #mill-score {
+    top: 5%;
+    left: 43%;
     background-color: #facd38;
 }
 
@@ -49,25 +53,21 @@ body {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 22px;
+    font-size: 3vw;
     background-color: #4a4a4a;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
+    z-index: 3;
 }
 
 #end-button {
     position: absolute;
-    font-size: 28px;
     top: 82%;
     left: 45%;
     z-index: 2;
-}
-
-#map {
-    z-index: 1;
 }
 
 
@@ -84,17 +84,14 @@ body {
     display: block;
 }
 
-.input-boxes {
-    position: absolute;
+
+#can-boxes, #expo-boxes, #mill-boxes {
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Vertically centers inputs */
-    align-items: center; /* Horizontally centers inputs */
 }
+
 
   /* Common styling for all input boxes */
 .input-boxes textarea,
@@ -116,15 +113,15 @@ body {
     outline-offset: 0;
 }
 
-#can-boxes {
+#can-boxes input, #can-boxes textarea {
     border: 3.5px solid rgb(14, 144, 180);
 }
 
-#expo-boxes {
+#expo-boxes input, #expo-boxes textarea {
     border: 3.5px solid rgb(3, 84, 146);
 }
 
-#mill-boxes {
+#mill-boxes input, #mill-boxes textarea {
     border: 3.5px solid rgb(250, 205, 56);
 }
 
@@ -137,12 +134,12 @@ body {
 }
   
 .tall-input-box {
-    width: 8vw;
+    width: 10vw;
     height: 4vw;
 }
   
 .small-input-box {
-    width: 8vw;
+    width: 10vw;
     height: 2vw;
 }
 
@@ -157,62 +154,62 @@ body {
 }
 
   
-.input-container input:nth-child(1) { top: 4%; left: 23%; } /* waterfront*/
-.input-container input:nth-child(2) { top: 10%; left: 1%; } /* city center*/
-.input-container input:nth-child(3) { top: 16%; left: 1%; } /* yaletown*/
-.input-container input:nth-child(4) { top: 23%; left: 3%; } /* olympic village*/
-.input-container input:nth-child(5) { top: 30%; left: 3%; } /* bway*/
-.input-container input:nth-child(6) { top: 37%; left: 9%; } /* King ed */
-.input-container input:nth-child(7) { top: 44%; left: 3%; } /* oakridge */
-.input-container input:nth-child(8) { top: 51%; left: 3%; } /* langara */
-.input-container input:nth-child(9) { top: 59%; left: 9%; } /* marine */
-.input-container input:nth-child(10) { top: 66%; left: 20.5%; } /* bridgeport*/
-.input-container input:nth-child(11) { top: 67%; left: 9%; } /* templeton */ 
-.input-container textarea:nth-child(12) { top: 73%; left: 5%; } /* sea island */ 
-.input-container textarea:nth-child(13) { top: 64%; left: 1%; } /* yvr */ 
-.input-container input:nth-child(14) { top: 73%; left: 20.5%; } /* capstan */ 
-.input-container input:nth-child(15) { top: 80%; left: 20.5%; } /* aberdeen */ 
-.input-container input:nth-child(16) { top: 88%; left: 20.5%; } /* landsdowne */ 
-.input-container input:nth-child(17) { top: 95%; left: 20.5%; } /* brighouse */ 
+#can-boxes input:nth-child(1) { top: 4.5%; left: 23%; } /* waterfront*/
+#can-boxes input:nth-child(2) { top: 11%; left: 3%; } /* city center*/
+#can-boxes input:nth-child(3) { top: 17%; left: 4%; } /* yaletown*/
+#can-boxes input:nth-child(4) { top: 24%; left: 6%; } /* olympic village*/
+#can-boxes input:nth-child(5) { top: 31%; left: 6%; } /* bway*/
+#can-boxes input:nth-child(6) { top: 38%; left: 8%; } /* King ed */
+#can-boxes input:nth-child(7) { top: 46%; left: 6%; } /* oakridge */
+#can-boxes input:nth-child(8) { top: 53%; left: 6%; } /* langara */
+#can-boxes input:nth-child(9) { top: 59%; left: 8%; } /* marine */
+#can-boxes input:nth-child(10) { top: 66%; left: 20.5%; } /* bridgeport*/
+#can-boxes input:nth-child(11) { top: 67%; left: 9%; } /* templeton */ 
+#can-boxes textarea:nth-child(12) { top: 73%; left: 5%; } /* sea island */ 
+#can-boxes textarea:nth-child(13) { top: 65%; left: 1%; } /* yvr */ 
+#can-boxes input:nth-child(14) { top: 74%; left: 20.5%; } /* capstan */ 
+#can-boxes input:nth-child(15) { top: 81%; left: 20.5%; } /* aberdeen */ 
+#can-boxes input:nth-child(16) { top: 88%; left: 20.5%; } /* landsdowne */ 
+#can-boxes input:nth-child(17) { top: 95%; left: 20.5%; } /* brighouse */ 
 
-.input-container input:nth-child(18) { top: 3%; left: 8.5%; } /* burrard */ 
-.input-container input:nth-child(19) { top: 11%; left: 22% } /* granville */ 
-.input-container input:nth-child(20) { top: 16%; left: 25%; } /* stadium */ 
-.input-container textarea:nth-child(21) { top: 20%; left: 31%; } /* main */ 
-.input-container textarea:nth-child(22) { top: 30%; left: 21%; } /* comm */ 
-.input-container input:nth-child(23) { top: 37%; left: 23%; } /* nanimo */ 
-.input-container input:nth-child(24) { top: 41.5%; left: 26%; } /* 29th */ 
-.input-container input:nth-child(25) { top: 46%; left: 23%; } /* joyce collingwood */ 
-.input-container input:nth-child(26) { top: 50%; left: 32%; } /* patterson */ 
-.input-container input:nth-child(27) { top: 54%; left: 35%; } /* metrotown */ 
-.input-container textarea:nth-child(28) { top: 61.5%; left: 49%; } /* royal oak */ 
-.input-container input:nth-child(29) { top: 56.5%; left: 52%; } /* edmonds */ 
-.input-container textarea:nth-child(30) { top: 61.5%; left: 58%; } /* 22nd */ 
-.input-container input:nth-child(31) { top: 52.5%; left: 50%; } /* new west */ 
-.input-container input:nth-child(32) { top: 49%; left: 59%; } /* columbia */ 
-.input-container input:nth-child(33) { top: 41%; left: 65%; } /* sapperton */ 
-.input-container input:nth-child(34) { top: 37%; left: 68%; } /* braid */ 
-.input-container input:nth-child(35) { top: 49%; left: 82%; } /* scott rd */ 
-.input-container input:nth-child(36) { top: 56%; left: 82%; } /* gateway */ 
-.input-container input:nth-child(37) { top: 64%; left: 82%; } /* surrey central */ 
-.input-container input:nth-child(38) { top: 71%; left: 82%; } /* king george */ 
+#expo-boxes input:nth-child(1) { top: 3%; left: 8.5%; } /* burrard */ 
+#expo-boxes input:nth-child(2) { top: 11%; left: 22% } /* granville */ 
+#expo-boxes input:nth-child(3) { top: 16%; left: 25%; } /* stadium */ 
+#expo-boxes textarea:nth-child(4) { top: 20%; left: 31%; } /* main */ 
+#expo-boxes textarea:nth-child(5) { top: 30%; left: 21%; } /* comm */ 
+#expo-boxes input:nth-child(6) { top: 37%; left: 23%; } /* nanimo */ 
+#expo-boxes input:nth-child(7) { top: 41.5%; left: 26%; } /* 29th */ 
+#expo-boxes input:nth-child(8) { top: 46%; left: 26%; } /* joyce collingwood */ 
+#expo-boxes input:nth-child(9) { top: 50%; left: 32%; } /* patterson */ 
+#expo-boxes input:nth-child(10) { top: 54%; left: 35%; } /* metrotown */ 
+#expo-boxes textarea:nth-child(11) { top: 61.5%; left: 49%; } /* royal oak */ 
+#expo-boxes input:nth-child(12) { top: 56.5%; left: 52%; } /* edmonds ARROW */ 
+#expo-boxes textarea:nth-child(13) { top: 61.5%; left: 58%; } /* 22nd */ 
+#expo-boxes input:nth-child(14) { top: 53%; left: 53%; } /* new west */ 
+#expo-boxes input:nth-child(15) { top: 49%; left: 59%; } /* columbia */ 
+#expo-boxes input:nth-child(16) { top: 41%; left: 65%; } /* sapperton */ 
+#expo-boxes input:nth-child(17) { top: 37%; left: 68%; } /* braid */ 
+#expo-boxes input:nth-child(18) { top: 49%; left: 82%; } /* scott rd */ 
+#expo-boxes input:nth-child(19) { top: 56%; left: 82%; } /* gateway */ 
+#expo-boxes input:nth-child(20) { top: 64%; left: 82%; } /* surrey central */ 
+#expo-boxes input:nth-child(21) { top: 71%; left: 82%; } /* king george */ 
 
-.input-container input:nth-child(39) { top: 26%; left: 18.5%; } /* vcc clark */ 
-.input-container input:nth-child(40) { top: 29.5%; left: 33%; } /* renfre */ 
-.input-container input:nth-child(41) { top: 24%; left: 38%; } /* rupert */ 
-.input-container input:nth-child(42) { top: 29.5%; left: 44%; } /* gilmore */ 
-.input-container textarea:nth-child(43) { top: 21.5%; left: 49%; } /* brentwood */ 
-.input-container input:nth-child(44) { top: 29.5%; left: 55%; } /* holdom */ 
-.input-container textarea:nth-child(45) { top: 21.5%; left: 59%; } /* sperling */ 
-.input-container textarea:nth-child(46) { top: 29.5%; left: 65%; } /* lake city way */ 
-.input-container textarea:nth-child(47) { top: 21.5%; left: 69%; } /* production way */ 
-.input-container textarea:nth-child(48) { top: 30%; left: 75%; } /* lougheed */ 
-.input-container input:nth-child(49) { top: 17%; left: 71%; } /* burquitlam */ 
-.input-container textarea:nth-child(50) { top: 8%; left: 80.5%; } /* moody cen */ 
-.input-container textarea:nth-child(51) { top: 8%; left: 86%; } /* inlet cen */ 
-.input-container textarea:nth-child(52) { top: 16.5%; left: 92%; } /* coquitlam cen */ 
-.input-container input:nth-child(53) { top: 8%; left: 92%; } /* lincoln */ 
-.input-container textarea:nth-child(54) { top: 1%; left: 88%; } /* lafarge lake */ 
+#mill-boxes input:nth-child(1) { top: 26%; left: 18.5%; } /* vcc clark */ 
+#mill-boxes input:nth-child(2) { top: 29.5%; left: 33%; } /* renfre */ 
+#mill-boxes input:nth-child(3) { top: 25%; left: 39%; } /* rupert ARROW */ 
+#mill-boxes input:nth-child(4) { top: 29.5%; left: 44%; } /* gilmore ARROW */ 
+#mill-boxes textarea:nth-child(5) { top: 21.5%; left: 49%; } /* brentwood ARROW */ 
+#mill-boxes input:nth-child(6) { top: 29.5%; left: 55%; } /* holdom ARROW */ 
+#mill-boxes textarea:nth-child(7) { top: 21.5%; left: 59%; } /* sperling ARROW */ 
+#mill-boxes textarea:nth-child(8) { top: 29.5%; left: 65%; } /* lake city way ARROW */ 
+#mill-boxes textarea:nth-child(9) { top: 21.5%; left: 69%; } /* production way ARROW */ 
+#mill-boxes textarea:nth-child(10) { top: 27%; left: 82%; } /* lougheed */ 
+#mill-boxes input:nth-child(11) { top: 17%; left: 71%; } /* burquitlam */ 
+#mill-boxes textarea:nth-child(12) { top: 9%; left: 79%; } /* moody cen */ 
+#mill-boxes textarea:nth-child(13) { top: 9%; left: 85%; } /* inlet cen */ 
+#mill-boxes textarea:nth-child(14) { top: 16.5%; left: 90%; } /* coquitlam cen */ 
+#mill-boxes input:nth-child(15) { top: 7%; left: 87%; } /* lincoln */ 
+#mill-boxes textarea:nth-child(16) { top: 1%; left: 87%; } /* lafarge lake */ 
 
 
 

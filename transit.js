@@ -14,8 +14,10 @@ play.addEventListener('click', () => {
 const giveUp = document.getElementById('end-button');
 
 giveUp.addEventListener('click', () => {
-    const boxes = document.getElementById('boxes');
-    boxes.style.display = 'none';
+    const boxes = document.getElementsByClassName('input-boxes');
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].style.display = 'none';
+    }
 });
 
 
@@ -27,10 +29,10 @@ const canStations = {
     'user-input-3': 'yaletown', 
     'user-input-4': 'olympic village', 
     'user-input-5': 'broadway',
-    'user-input-6': 'king edward',
+    'user-input-6': 'king ed',
     'user-input-7': 'oakridge',
     'user-input-8': 'langara',
-    'user-input-9': 'marine dr',
+    'user-input-9': 'marine',
     'user-input-10': 'bridgeport',
     'user-input-11': 'templeton',
     'user-input-12': 'sea island',
@@ -50,6 +52,7 @@ function checkInputCorrectCan(event) {
 
     if (inputElem.value.toLowerCase().includes(targetWord)) {
         inputElem.style.backgroundColor = 'rgba(14, 144, 180, 0.3)';
+        inputElem.style.border = '3.5px solid rgb(14, 144, 180)'; // remove - for testing
         correctStatusCan[inputElem.id] = true;
     } else {
         inputElem.style.border = '2px solid red';
@@ -62,7 +65,6 @@ function checkInputCorrectCan(event) {
 
     const numCorrect = Object.values(correctStatusCan).filter(item => item === true).length;
     console.log(numCorrect);
-
     canScore = "Canada Line ".concat(numCorrect.toString(), "/17");
     document.getElementById("can-score").innerHTML = canScore;
 }
@@ -82,7 +84,7 @@ const expoStations = {
     'user-input-18': 'burrard', 
     'user-input-19': 'granville', 
     'user-input-20': 'stadium', 
-    'user-input-21': 'main st',
+    'user-input-21': 'main',
     'user-input-22': 'commercial',
     'user-input-23': 'nanaimo',
     'user-input-24': '29th',
@@ -110,7 +112,8 @@ function checkInputCorrectExpo(event) {
     const targetWord = expoStations[inputElem.id]; // Get the target word based on the ID
 
     if (inputElem.value.toLowerCase().includes(targetWord)) {
-        inputElem.style.backgroundColor = 'rgba(3, 84, 146, 0.2);'
+        inputElem.style.backgroundColor = 'rgba(3, 84, 146, 0.3)';
+        inputElem.style.border = '3.5px solid rgb(3, 84, 146)';
         correctStatusExpo[inputElem.id] = true;
     } else {
         inputElem.style.border = '2px solid red';
@@ -130,6 +133,7 @@ function checkInputCorrectExpo(event) {
 Object.keys(expoStations).forEach(inputId => {
     const inputElement = document.getElementById(inputId);
     correctStatusExpo[inputId] = false;
+    console.log(inputElement);
     inputElement.addEventListener('input', checkInputCorrectExpo);
     inputElement.addEventListener('textarea', checkInputCorrectExpo);
 });
@@ -140,7 +144,7 @@ Object.keys(expoStations).forEach(inputId => {
 /********* MILLEMIUM LINE ********/
 
 const millStations = {
-    'user-input-39': 'vcc clark', 
+    'user-input-39': 'vcc', 
     'user-input-40': 'renfrew', 
     'user-input-41': 'rupert', 
     'user-input-42': 'gilmore',
@@ -165,10 +169,11 @@ function checkInputCorrectMill(event) {
     const targetWord = millStations[inputElem.id]; // Get the target word based on the ID
 
     if (inputElem.value.toLowerCase().includes(targetWord)) {
-        inputElem.style.backgroundColor = 'rgba(3, 84, 146, 0.5);'
+        inputElem.style.backgroundColor = 'rgba(250, 205, 56, 0.5)';
+        inputElem.style.border = '3.5px solid rgb(250, 205, 56)';
         correctStatusMill[inputElem.id] = true;
     } else {
-        inputElem.style.border = '2px solid red';
+        inputElem.style.border = '3.5px solid red';
         correctStatusMill[inputElem.id] = false;
     }
 
