@@ -14,33 +14,45 @@ play.addEventListener('click', () => {
 const giveUp = document.getElementById('end-button');
 
 giveUp.addEventListener('click', () => {
-    const boxes = document.getElementsByClassName('input-boxes');
-    for (let i = 0; i < boxes.length; i++) {
-        boxes[i].style.display = 'none';
+
+    const containers = document.querySelectorAll('.input-boxes');
+    const canInputs = containers[0].querySelectorAll('input, textarea');
+    const expoInputs = containers[1].querySelectorAll('input, textarea');
+    const millInputs = containers[2].querySelectorAll('input, textarea');
+
+    for( let i=0; i<canInputs.length; i++) {
+        canInputs[i].value = canStations[canInputs[i].id][1];
     }
+    for( let i=0; i<expoInputs.length; i++) {
+        expoInputs[i].value = expoStations[expoInputs[i].id][1];
+    }
+    for( let i=0; i<millInputs.length; i++) {
+        millInputs[i].value = millStations[millInputs[i].id][1];
+    }
+
 });
 
 
 /****** CANADALINE ***** */
 
 const canStations = {
-    'user-input-1': 'waterfront',
-    'user-input-2': 'city cen', 
-    'user-input-3': 'yaletown', 
-    'user-input-4': 'olympic village', 
-    'user-input-5': 'broadway',
-    'user-input-6': 'king ed',
-    'user-input-7': 'oakridge',
-    'user-input-8': 'langara',
-    'user-input-9': 'marine',
-    'user-input-10': 'bridgeport',
-    'user-input-11': 'templeton',
-    'user-input-12': 'sea island',
-    'user-input-13': 'yvr',
-    'user-input-14': 'capstan',
-    'user-input-15': 'aberdeen',
-    'user-input-16': 'lansdowne',
-    'user-input-17': 'brighouse',
+    'user-input-1': ['waterfront', 'Waterfront'],
+    'user-input-2': ['city cen', 'Vancouver City Center'],
+    'user-input-3': ['yaletown', 'Yaletown-Roundhouse'],
+    'user-input-4': ['olympic village', 'Olympic Village'],
+    'user-input-5': ['broadway', 'Broadway-City Hall'],
+    'user-input-6': ['king ed', 'King Edward'],
+    'user-input-7': ['oakridge', 'Oakridge-41st'],
+    'user-input-8': ['langara', 'Langara-49th'],
+    'user-input-9': ['marine', 'Marine Drive'],
+    'user-input-10': ['bridgeport', 'Bridgeport'],
+    'user-input-11': ['templeton', 'Templeton'],
+    'user-input-12': ['sea island', 'Sea Island'],
+    'user-input-13': ['yvr', 'YVR-Airport'],
+    'user-input-14': ['capstan', 'Capstan'],
+    'user-input-15': ['aberdeen', 'Aberdeen'],
+    'user-input-16': ['lansdowne', 'Lansdowne'],
+    'user-input-17': ['brighouse', 'Richmond-Brighouse'],
 };
 
 
@@ -48,11 +60,12 @@ const correctStatusCan = {};
 
 function checkInputCorrectCan(event) {
     const inputElem = event.target; // The element that triggered the event
-    const targetWord = canStations[inputElem.id]; // Get the target word based on the ID
+    const targetWord = canStations[inputElem.id][0]; // Get the target word based on the ID
 
     if (inputElem.value.toLowerCase().includes(targetWord)) {
         inputElem.style.backgroundColor = 'rgba(14, 144, 180, 0.3)';
-        inputElem.style.border = '3.5px solid rgb(14, 144, 180)'; // remove - for testing
+        inputElem.style.border = '3.5px solid rgb(14, 144, 180)';
+        inputElem.value = canStations[inputElem.id][1];
         correctStatusCan[inputElem.id] = true;
     } else {
         inputElem.style.border = '2px solid red';
@@ -81,27 +94,27 @@ Object.keys(canStations).forEach(inputId => {
 /********* EXPO LINE ********/
 
 const expoStations = {
-    'user-input-18': 'burrard', 
-    'user-input-19': 'granville', 
-    'user-input-20': 'stadium', 
-    'user-input-21': 'main',
-    'user-input-22': 'commercial',
-    'user-input-23': 'nanaimo',
-    'user-input-24': '29th',
-    'user-input-25': 'joyce',
-    'user-input-26': 'patterson',
-    'user-input-27': 'metrotown',
-    'user-input-28': 'royal oak',
-    'user-input-29': 'edmonds',
-    'user-input-30': '22nd',
-    'user-input-31': 'new west',
-    'user-input-32': 'columbia',
-    'user-input-33': 'sapperton', 
-    'user-input-34': 'braid',
-    'user-input-35': 'scott',
-    'user-input-36': 'gateway',
-    'user-input-37': 'surrey cen',
-    'user-input-38': 'king george',
+    'user-input-18': ['burrard', 'Burrard' ],
+    'user-input-19': ['granville', 'Granville'],
+    'user-input-20': ['stadium', 'Stadium-Chinatown'],
+    'user-input-21': ['main', 'Main Street-Science World'],
+    'user-input-22': ['commercial', 'Commercial-Broadway'],
+    'user-input-23': ['nanaimo', 'Nanaimo'],
+    'user-input-24': ['29th', '29th'],
+    'user-input-25': ['joyce', 'Joyce-Collingwood'],
+    'user-input-26': ['patterson', 'Patterson'],
+    'user-input-27': ['metrotown', 'Metrotown'],
+    'user-input-28': ['royal oak', 'Royal Oak'],
+    'user-input-29': ['edmonds', 'Edmonds'],
+    'user-input-30': ['22nd', '22nd'],
+    'user-input-31': ['new west', 'New Westminster'],
+    'user-input-32': ['columbia', 'Columbia'],
+    'user-input-33': ['sapperton', 'Sapperton'],
+    'user-input-34': ['braid', 'Braid'],
+    'user-input-35': ['scott', 'Scott Road'],
+    'user-input-36': ['gateway', 'Gateway'],
+    'user-input-37': ['surrey cen', 'Surrey Central'],
+    'user-input-38': ['king george', 'King George'],
 };
 
 
@@ -109,11 +122,12 @@ const correctStatusExpo = {};
 
 function checkInputCorrectExpo(event) {
     const inputElem = event.target; // The element that triggered the event
-    const targetWord = expoStations[inputElem.id]; // Get the target word based on the ID
+    const targetWord = expoStations[inputElem.id][0]; // Get the target word based on the ID
 
     if (inputElem.value.toLowerCase().includes(targetWord)) {
         inputElem.style.backgroundColor = 'rgba(3, 84, 146, 0.3)';
         inputElem.style.border = '3.5px solid rgb(3, 84, 146)';
+        inputElem.value = expoStations[inputElem.id][1];
         correctStatusExpo[inputElem.id] = true;
     } else {
         inputElem.style.border = '2px solid red';
@@ -133,7 +147,6 @@ function checkInputCorrectExpo(event) {
 Object.keys(expoStations).forEach(inputId => {
     const inputElement = document.getElementById(inputId);
     correctStatusExpo[inputId] = false;
-    console.log(inputElement);
     inputElement.addEventListener('input', checkInputCorrectExpo);
     inputElement.addEventListener('textarea', checkInputCorrectExpo);
 });
@@ -144,33 +157,34 @@ Object.keys(expoStations).forEach(inputId => {
 /********* MILLEMIUM LINE ********/
 
 const millStations = {
-    'user-input-39': 'vcc', 
-    'user-input-40': 'renfrew', 
-    'user-input-41': 'rupert', 
-    'user-input-42': 'gilmore',
-    'user-input-43': 'brentwood',
-    'user-input-44': 'holdom',
-    'user-input-45': 'sperling',
-    'user-input-46': 'lake city',
-    'user-input-47': 'production',
-    'user-input-48': 'lougheed',
-    'user-input-49': 'burquitlam',
-    'user-input-50': 'moody cen',
-    'user-input-51': 'inlet cen',
-    'user-input-52': 'coquitlam cen',
-    'user-input-53': 'lincoln',
-    'user-input-54': 'lafarge',
+    'user-input-39': ['vcc', 'VCC-Clark'],
+    'user-input-40': ['renfrew', 'Renfrew'],
+    'user-input-41': ['rupert', 'Rupert'],
+    'user-input-42': ['gilmore', 'Gilmore'],
+    'user-input-43': ['brentwood', 'Brentwood Town Centre'],
+    'user-input-44': ['holdom', 'Holdom'],
+    'user-input-45': ['sperling', 'Sperling-Burnaby Lake'],
+    'user-input-46': ['lake city', 'Lake City Way'],
+    'user-input-47': ['production', 'Production Way-University'],
+    'user-input-48': ['lougheed', 'Lougheed Town Centre'],
+    'user-input-49': ['burquitlam', 'Burquitlam'],
+    'user-input-50': ['moody cen', 'Moody Centre'],
+    'user-input-51': ['inlet cen', 'Inlet Centre'],
+    'user-input-52': ['coquitlam cen', 'Coquitlam Central'],
+    'user-input-53': ['lincoln', 'Lincoln'],
+    'user-input-54': ['lafarge', 'Lafarge Lake-Douglas'],
 };
 
 const correctStatusMill = {};
 
 function checkInputCorrectMill(event) {
     const inputElem = event.target; // The element that triggered the event
-    const targetWord = millStations[inputElem.id]; // Get the target word based on the ID
+    const targetWord = millStations[inputElem.id][0]; // Get the target word based on the ID
 
     if (inputElem.value.toLowerCase().includes(targetWord)) {
         inputElem.style.backgroundColor = 'rgba(250, 205, 56, 0.5)';
         inputElem.style.border = '3.5px solid rgb(250, 205, 56)';
+        inputElem.value = millStations[inputElem.id][1];
         correctStatusMill[inputElem.id] = true;
     } else {
         inputElem.style.border = '3.5px solid red';
@@ -193,6 +207,5 @@ Object.keys(millStations).forEach(inputId => {
     inputElement.addEventListener('input', checkInputCorrectMill);
     inputElement.addEventListener('textarea', checkInputCorrectMill);
 });
-
 
 
