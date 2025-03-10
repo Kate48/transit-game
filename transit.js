@@ -39,7 +39,7 @@ const canStations = {
     'user-input-1': ['waterfront', 'Waterfront'],
     'user-input-2': ['city cen', 'Vancouver City Center'],
     'user-input-3': ['yaletown', 'Yaletown-Roundhouse'],
-    'user-input-4': ['olympic village', 'Olympic Village'],
+    'user-input-4': ['olympic', 'Olympic Village'],
     'user-input-5': ['broadway', 'Broadway-City Hall'],
     'user-input-6': ['king ed', 'King Edward'],
     'user-input-7': ['oakridge', 'Oakridge-41st'],
@@ -72,14 +72,14 @@ function checkInputCorrectCan(event) {
         correctStatusCan[inputElem.id] = false;
     }
 
-    if (Object.values(correctStatusCan).every(status => status)) {
-        alert("You got the Canadaline!");
-    }
-
     const numCorrect = Object.values(correctStatusCan).filter(item => item === true).length;
     console.log(numCorrect);
     canScore = "Canada Line ".concat(numCorrect.toString(), "/17");
     document.getElementById("can-score").innerHTML = canScore;
+
+    if (Object.values(correctStatusCan).every(status => status)) {
+        alert("You got the Canadaline!");
+    }
 }
 
 Object.keys(canStations).forEach(inputId => {
@@ -113,7 +113,7 @@ const expoStations = {
     'user-input-34': ['braid', 'Braid'],
     'user-input-35': ['scott', 'Scott Road'],
     'user-input-36': ['gateway', 'Gateway'],
-    'user-input-37': ['surrey cen', 'Surrey Central'],
+    'user-input-37': ['surrey', 'Surrey Central'],
     'user-input-38': ['king george', 'King George'],
 };
 
@@ -168,9 +168,9 @@ const millStations = {
     'user-input-47': ['production', 'Production Way-University'],
     'user-input-48': ['lougheed', 'Lougheed Town Centre'],
     'user-input-49': ['burquitlam', 'Burquitlam'],
-    'user-input-50': ['moody cen', 'Moody Centre'],
-    'user-input-51': ['inlet cen', 'Inlet Centre'],
-    'user-input-52': ['coquitlam cen', 'Coquitlam Central'],
+    'user-input-50': ['moody', 'Moody Centre'],
+    'user-input-51': ['inlet', 'Inlet Centre'],
+    'user-input-52': ['coquitlam', 'Coquitlam Central'],
     'user-input-53': ['lincoln', 'Lincoln'],
     'user-input-54': ['lafarge', 'Lafarge Lake-Douglas'],
 };
@@ -187,7 +187,7 @@ function checkInputCorrectMill(event) {
         inputElem.value = millStations[inputElem.id][1];
         correctStatusMill[inputElem.id] = true;
     } else {
-        inputElem.style.border = '3.5px solid red';
+        inputElem.style.border = '2px solid red';
         correctStatusMill[inputElem.id] = false;
     }
 
