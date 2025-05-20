@@ -96,7 +96,7 @@ Object.keys(canStations).forEach(inputId => {
 
 const expoStations = {
     'user-input-18': ['Burrard', 'burrard', 'null'],
-    'user-input-19': ['Granville' 'granville', 'null'],
+    'user-input-19': ['Granville', 'granville', 'null'],
     'user-input-20': ['Stadium-Chinatown', 'stadium', 'chinatown'],
     'user-input-21': ['Main Street-Science World', 'science world', 'main'],
     'user-input-22': ['Commercial-Broadway', 'commercial', 'null'],
