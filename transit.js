@@ -36,23 +36,23 @@ giveUp.addEventListener('click', () => {
 /****** CANADALINE ***** */
 
 const canStations = {
-    'user-input-1': ['waterfront', 'Waterfront'],
-    'user-input-2': ['city cen', 'Vancouver City Center'],
-    'user-input-3': ['yaletown', 'Yaletown-Roundhouse'],
-    'user-input-4': ['olympic', 'Olympic Village'],
-    'user-input-5': ['broadway', 'Broadway-City Hall'],
-    'user-input-6': ['king ed', 'King Edward'],
-    'user-input-7': ['oakridge', 'Oakridge-41st'],
-    'user-input-8': ['langara', 'Langara-49th'],
-    'user-input-9': ['marine', 'Marine Drive'],
-    'user-input-10': ['bridgeport', 'Bridgeport'],
-    'user-input-11': ['templeton', 'Templeton'],
-    'user-input-12': ['sea island', 'Sea Island'],
-    'user-input-13': ['yvr', 'YVR-Airport'],
-    'user-input-14': ['capstan', 'Capstan'],
-    'user-input-15': ['aberdeen', 'Aberdeen'],
-    'user-input-16': ['lansdowne', 'Lansdowne'],
-    'user-input-17': ['brighouse', 'Richmond-Brighouse'],
+    'user-input-1': ['Waterfront', 'waterfront', 'null'],
+    'user-input-2': ['Vancouver City Center', 'city cen'],
+    'user-input-3': ['Yaletown-Roundhouse', 'yaletown', 'roundhouse'],
+    'user-input-4': ['Olympic Village', 'olympic', 'null'],
+    'user-input-5': ['Broadway-City Hall', 'broadway', 'city hall'],
+    'user-input-6': ['King Edward', 'king ed', 'null'],
+    'user-input-7': ['Oakridge-41st', 'oakridge', '41st'],
+    'user-input-8': ['Langara-49th', 'langara', '49th'],
+    'user-input-9': ['Marine Drive', 'marine', 'null'],
+    'user-input-10': ['Bridgeport', 'bridgeport', 'null'],
+    'user-input-11': ['Templeton', 'templeton', 'null'],
+    'user-input-12': ['Sea Island', 'sea island', 'null'],
+    'user-input-13': ['YVR-Airport', 'yvr', 'airport'],
+    'user-input-14': ['Capstan', 'capstan', 'null'],
+    'user-input-15': ['Aberdeen', 'aberdeen', 'null'],
+    'user-input-16': ['Lansdowne', 'lansdowne', 'null'],
+    'user-input-17': ['Richmond-Brighouse', 'brighouse', 'null'],
 };
 
 
@@ -60,12 +60,14 @@ const correctStatusCan = {};
 
 function checkInputCorrectCan(event) {
     const inputElem = event.target; // The element that triggered the event
-    const targetWord = canStations[inputElem.id][0]; // Get the target word based on the ID
+    const targetWord1 = canStations[inputElem.id][1]; // Get the target word based on the ID
+    const targetWord2 = canStations[inputElem.id][2];
 
-    if (inputElem.value.toLowerCase().includes(targetWord)) {
+    if (inputElem.value.toLowerCase().includes(targetWord1) || 
+        inputElem.value.toLowerCase().includes(targetWord2)) {
         inputElem.style.backgroundColor = 'rgba(14, 144, 180, 0.3)';
         inputElem.style.border = '3.5px solid rgb(14, 144, 180)';
-        inputElem.value = canStations[inputElem.id][1];
+        inputElem.value = canStations[inputElem.id][0];
         correctStatusCan[inputElem.id] = true;
     } else {
         inputElem.style.border = '2px solid red';
