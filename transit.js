@@ -122,10 +122,11 @@ const expoStations = {
 const correctStatusExpo = {};
 
 function checkInputCorrectExpo(event) {
-    const inputElem = event.target; // The element that triggered the event
-    const targetWord = expoStations[inputElem.id][2]; // Get the target word based on the ID
+    const inputElem = event.target;
+    const targetWord1 = expoStations[inputElem.id][1];
+    const targetWord2 = expoStations[inputElem.id][2];
 
-    if (inputElem.value.toLowerCase().includes(targetWord)) {
+    if (inputElem.value.toLowerCase().includes(targetWord1) || inputElem.value.toLowerCase().includes(targetWord2)) {
         inputElem.style.backgroundColor = 'rgba(3, 84, 146, 0.3)';
         inputElem.style.border = '3.5px solid rgb(3, 84, 146)';
         inputElem.value = expoStations[inputElem.id][0]; // correct answer 
@@ -158,31 +159,32 @@ Object.keys(expoStations).forEach(inputId => {
 /********* MILLEMIUM LINE ********/
 
 const millStations = {
-    'user-input-39': ['vcc', 'VCC-Clark'],
-    'user-input-40': ['renfrew', 'Renfrew'],
-    'user-input-41': ['rupert', 'Rupert'],
-    'user-input-42': ['gilmore', 'Gilmore'],
-    'user-input-43': ['brentwood', 'Brentwood Town Centre'],
-    'user-input-44': ['holdom', 'Holdom'],
-    'user-input-45': ['sperling', 'Sperling-Burnaby Lake'],
-    'user-input-46': ['lake city', 'Lake City Way'],
-    'user-input-47': ['production', 'Production Way-University'],
-    'user-input-48': ['lougheed', 'Lougheed Town Centre'],
-    'user-input-49': ['burquitlam', 'Burquitlam'],
-    'user-input-50': ['moody', 'Moody Centre'],
-    'user-input-51': ['inlet', 'Inlet Centre'],
-    'user-input-52': ['coquitlam', 'Coquitlam Central'],
-    'user-input-53': ['lincoln', 'Lincoln'],
-    'user-input-54': ['lafarge', 'Lafarge Lake-Douglas'],
+    'user-input-39': ['VCC-Clark', 'vcc', 'clark'],
+    'user-input-40': ['Renfrew', 'renfrew', 'null'],
+    'user-input-41': ['Rupert', 'rupert', 'null'],
+    'user-input-42': ['Gilmore', 'gilmore', 'null'],
+    'user-input-43': ['Brentwood Town Centre', 'brentwood', 'null'],
+    'user-input-44': ['Holdom', 'holdom', 'null'],
+    'user-input-45': ['Sperling-Burnaby Lake', 'sperling', 'burnaby lake'],
+    'user-input-46': ['Lake City Way', 'lake city', 'lake way'],
+    'user-input-47': ['Production Way-University', 'production', 'university'],
+    'user-input-48': ['Lougheed Town Centre' 'lougheed', 'null'],
+    'user-input-49': ['Burquitlam', 'burquitlam', 'null'],
+    'user-input-50': ['Moody Centre', 'moody', 'null'],
+    'user-input-51': ['Inlet Centre', 'inlet', 'null'],
+    'user-input-52': ['Coquitlam Central', 'coquitlam', 'null'],
+    'user-input-53': ['Lincoln', 'lincoln', 'null'],
+    'user-input-54': ['Lafarge Lake-Douglas', 'lafarge', 'douglas'],
 };
 
 const correctStatusMill = {};
 
 function checkInputCorrectMill(event) {
-    const inputElem = event.target; // The element that triggered the event
-    const targetWord = millStations[inputElem.id][0]; // Get the target word based on the ID
+    const inputElem = event.target; 
+    const targetWord1 = millStations[inputElem.id][1]; 
+    const targetWord2 = millStations[inputElem.id][2];
 
-    if (inputElem.value.toLowerCase().includes(targetWord)) {
+    if (inputElem.value.toLowerCase().includes(targetWord1) || inputElem.value.toLowerCase().includes(targetWord2)) {
         inputElem.style.backgroundColor = 'rgba(250, 205, 56, 0.5)';
         inputElem.style.border = '3.5px solid rgb(250, 205, 56)';
         inputElem.value = millStations[inputElem.id][1];
