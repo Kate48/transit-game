@@ -21,13 +21,13 @@ giveUp.addEventListener('click', () => {
     const millInputs = containers[2].querySelectorAll('input, textarea');
 
     for( let i=0; i<canInputs.length; i++) {
-        canInputs[i].value = canStations[canInputs[i].id][1];
+        canInputs[i].value = canStations[canInputs[i].id][0];
     }
     for( let i=0; i<expoInputs.length; i++) {
-        expoInputs[i].value = expoStations[expoInputs[i].id][1];
+        expoInputs[i].value = expoStations[expoInputs[i].id][0];
     }
     for( let i=0; i<millInputs.length; i++) {
-        millInputs[i].value = millStations[millInputs[i].id][1];
+        millInputs[i].value = millStations[millInputs[i].id][0];
     }
 
 });
