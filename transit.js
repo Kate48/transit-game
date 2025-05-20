@@ -168,7 +168,7 @@ const millStations = {
     'user-input-45': ['Sperling-Burnaby Lake', 'sperling', 'burnaby lake'],
     'user-input-46': ['Lake City Way', 'lake city', 'lake way'],
     'user-input-47': ['Production Way-University', 'production', 'university'],
-    'user-input-48': ['Lougheed Town Centre' 'lougheed', 'null'],
+    'user-input-48': ['Lougheed Town Centre', 'lougheed', 'null'],
     'user-input-49': ['Burquitlam', 'burquitlam', 'null'],
     'user-input-50': ['Moody Centre', 'moody', 'null'],
     'user-input-51': ['Inlet Centre', 'inlet', 'null'],
