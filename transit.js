@@ -187,7 +187,7 @@ function checkInputCorrectMill(event) {
     if (inputElem.value.toLowerCase().includes(targetWord1) || inputElem.value.toLowerCase().includes(targetWord2)) {
         inputElem.style.backgroundColor = 'rgba(250, 205, 56, 0.5)';
         inputElem.style.border = '3.5px solid rgb(250, 205, 56)';
-        inputElem.value = millStations[inputElem.id][1];
+        inputElem.value = millStations[inputElem.id][0];
         correctStatusMill[inputElem.id] = true;
     } else {
         inputElem.style.border = '2px solid red';
