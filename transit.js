@@ -95,27 +95,27 @@ Object.keys(canStations).forEach(inputId => {
 /********* EXPO LINE ********/
 
 const expoStations = {
-    'user-input-18': ['burrard', 'Burrard' ],
-    'user-input-19': ['granville', 'Granville'],
-    'user-input-20': ['stadium', 'Stadium-Chinatown'],
-    'user-input-21': ['main', 'Main Street-Science World'],
-    'user-input-22': ['commercial', 'Commercial-Broadway'],
-    'user-input-23': ['nanaimo', 'Nanaimo'],
-    'user-input-24': ['29th', '29th'],
-    'user-input-25': ['joyce', 'Joyce-Collingwood'],
-    'user-input-26': ['patterson', 'Patterson'],
-    'user-input-27': ['metrotown', 'Metrotown'],
-    'user-input-28': ['royal oak', 'Royal Oak'],
-    'user-input-29': ['edmonds', 'Edmonds'],
-    'user-input-30': ['22nd', '22nd'],
-    'user-input-31': ['new west', 'New Westminster'],
-    'user-input-32': ['columbia', 'Columbia'],
-    'user-input-33': ['sapperton', 'Sapperton'],
-    'user-input-34': ['braid', 'Braid'],
-    'user-input-35': ['scott', 'Scott Road'],
-    'user-input-36': ['gateway', 'Gateway'],
-    'user-input-37': ['surrey', 'Surrey Central'],
-    'user-input-38': ['king george', 'King George'],
+    'user-input-18': ['Burrard', 'burrard', 'null'],
+    'user-input-19': ['Granville' 'granville', 'null'],
+    'user-input-20': ['Stadium-Chinatown', 'stadium', 'chinatown'],
+    'user-input-21': ['Main Street-Science World', 'science world', 'main'],
+    'user-input-22': ['Commercial-Broadway', 'commercial', 'null'],
+    'user-input-23': ['Nanaimo', 'naniamo', 'null'],
+    'user-input-24': ['29th', '29th', 'null'],
+    'user-input-25': ['Joyce-Collingwood', 'joyce', 'collingwood'],
+    'user-input-26': ['Patterson', 'patterson', 'null'],
+    'user-input-27': ['Metrotown' 'metrotown', 'null'],
+    'user-input-28': ['Royal Oak', 'royal', 'oak'],
+    'user-input-29': ['Edmonds', 'edmonds', 'null'],
+    'user-input-30': ['22nd', '22nd', 'null'],
+    'user-input-31': ['New Westminster', 'new west', 'null'],
+    'user-input-32': ['Columbia', 'columbia', 'null'],
+    'user-input-33': ['Sapperton', 'sapperton', 'null'],
+    'user-input-34': ['Braid', 'braid', 'null'],
+    'user-input-35': ['Scott Road', 'scott', 'null'],
+    'user-input-36': ['Gateway', 'gateway', 'null'],
+    'user-input-37': ['Surrey Central', 'surrey', 'null'],
+    'user-input-38': ['King George', 'king george', 'null'],
 };
 
 
@@ -123,12 +123,12 @@ const correctStatusExpo = {};
 
 function checkInputCorrectExpo(event) {
     const inputElem = event.target; // The element that triggered the event
-    const targetWord = expoStations[inputElem.id][0]; // Get the target word based on the ID
+    const targetWord = expoStations[inputElem.id][2]; // Get the target word based on the ID
 
     if (inputElem.value.toLowerCase().includes(targetWord)) {
         inputElem.style.backgroundColor = 'rgba(3, 84, 146, 0.3)';
         inputElem.style.border = '3.5px solid rgb(3, 84, 146)';
-        inputElem.value = expoStations[inputElem.id][1];
+        inputElem.value = expoStations[inputElem.id][0]; // correct answer 
         correctStatusExpo[inputElem.id] = true;
     } else {
         inputElem.style.border = '2px solid red';
