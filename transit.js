@@ -104,7 +104,7 @@ const expoStations = {
     'user-input-24': ['29th', '29th', 'null'],
     'user-input-25': ['Joyce-Collingwood', 'joyce', 'collingwood'],
     'user-input-26': ['Patterson', 'patterson', 'null'],
-    'user-input-27': ['Metrotown' 'metrotown', 'null'],
+    'user-input-27': ['Metrotown', 'metrotown', 'null'],
     'user-input-28': ['Royal Oak', 'royal', 'oak'],
     'user-input-29': ['Edmonds', 'edmonds', 'null'],
     'user-input-30': ['22nd', '22nd', 'null'],
