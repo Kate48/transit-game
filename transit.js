@@ -63,8 +63,7 @@ function checkInputCorrectCan(event) {
     const targetWord1 = canStations[inputElem.id][1]; // Get the target word based on the ID
     const targetWord2 = canStations[inputElem.id][2];
 
-    if (inputElem.value.toLowerCase().includes(targetWord1) || 
-        inputElem.value.toLowerCase().includes(targetWord2)) {
+    if (inputElem.value.toLowerCase().includes(targetWord1) || inputElem.value.toLowerCase().includes(targetWord2)) {
         inputElem.style.backgroundColor = 'rgba(14, 144, 180, 0.3)';
         inputElem.style.border = '3.5px solid rgb(14, 144, 180)';
         inputElem.value = canStations[inputElem.id][0];
