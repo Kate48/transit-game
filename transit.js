@@ -100,7 +100,7 @@ const expoStations = {
     'user-input-20': ['Stadium-Chinatown', 'stadium', 'chinatown'],
     'user-input-21': ['Main Street-Science World', 'science world', 'main'],
     'user-input-22': ['Commercial-Broadway', 'commercial', 'null'],
-    'user-input-23': ['Nanaimo', 'naniamo', 'null'],
+    'user-input-23': ['Nanaimo', 'nanaiamo', 'null'],
     'user-input-24': ['29th', '29th', 'null'],
     'user-input-25': ['Joyce-Collingwood', 'joyce', 'collingwood'],
     'user-input-26': ['Patterson', 'patterson', 'null'],
